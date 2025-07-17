@@ -11,7 +11,7 @@ This is a Laravel 12 API starter project using **Laravel Passport** for authenti
 -   Laravel 12
 -   MySQL
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the Repository
 
@@ -32,7 +32,7 @@ composer install
 cp .env.example .env
 ```
 
-Configure your database and other credentials in `.env`.
+Configure database and other credentials in `.env`.
 
 ### 4. Generate Application Key
 
@@ -64,9 +64,17 @@ This will:
 -   Create personal access and password grant clients.
 -   Store them in the `oauth_clients` table.
 
-> ⚠️ If you run `php artisan migrate:refresh` in the future, you'll need to rerun `passport:client --personal`.
+> If you run `php artisan migrate:refresh` in the future, you'll need to rerun `passport:client --personal`.
 
-### 8. start the server
+### 8. Run the db seed command to populate the database
+
+```bash
+php artisan db:seed
+```
+
+-   This will create a test user with `test@example.com` email and `password` password.
+
+### 9. start the server
 
 ```bash
 php artisan serve
