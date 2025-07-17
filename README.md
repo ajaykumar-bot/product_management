@@ -46,10 +46,10 @@ php artisan key:generate
 php artisan migrate
 ```
 
-### 6. Install Passport
+### 6. Generate passport keys
 
 ```bash
-php artisan install:api --passport
+php artisan passport:keys
 ```
 
 ### 7. Create personal access clien
@@ -65,3 +65,9 @@ This will:
 -   Store them in the `oauth_clients` table.
 
 > ⚠️ If you run `php artisan migrate:refresh` in the future, you'll need to rerun `passport:client --personal`.
+
+### 8. start the server
+
+```bash
+php artisan serve
+```
